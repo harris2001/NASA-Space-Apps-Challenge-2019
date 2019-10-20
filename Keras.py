@@ -39,3 +39,5 @@ yp = model.predict(X_test)
 np.argmax(yp[0])
 class_labels = ["T-shirt/top","Trouser","Pullover","Dress","Coat","Sandal","Shirt","Sneaker","Bag","Ankle boot"]
 class_labels[np.argmax(yp[0])]
+
+          
