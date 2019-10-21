@@ -16,6 +16,10 @@ Guessing master is a complete model, ready to be trained by million of NASA's 3d
 ## How does it work:
 
 The "Master" is a system of two Neural Networks: one Neural Network 
-Firslty, the "Master" performs a Fast Fourier Transformation on the data received by the printer. The frequencies are then separated and the object becomes more clear. Afterthen, the master
+Firslty, the "Master" performs a Fast Fourier Transformation on the data received by the printer. The frequencies are then separated and the object becomes more clear.
 
-https://github.com/harris2001/NASA-Space-Apps-Challenge-2019/issues/4#issue-510188752
+Initial Image, after been exposed to electromagnetic radiation:
+![Screenshot (101)](https://user-images.githubusercontent.com/29304550/67232350-db447f00-f449-11e9-9b4f-79a7f5f23ed9.png)
+
+Image After Fast Fourier Transformation:
+![Screenshot (102)](https://user-images.githubusercontent.com/29304550/67232931-fb287280-f44a-11e9-9cd2-46cd9b1bf9f2.png)
