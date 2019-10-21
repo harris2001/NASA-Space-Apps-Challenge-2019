@@ -32,3 +32,5 @@ The Deep Convolutional Generative Adversarial Network is trained by a load of sa
 
 *Due to lack of 3d models I used 2d Images to train the Master. If an API is provided, then by using the "The Master" can also perform a scan on the 3rd dimention and extract the features of the object.
 
+My presentation:
+https://www.dropbox.com/s/b6i728ebsokk4q0/Presentation%204.pptx?dl=0
