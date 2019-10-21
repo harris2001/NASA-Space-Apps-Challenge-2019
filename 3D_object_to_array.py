@@ -17,8 +17,8 @@ with open(os.devnull, 'w') as devnull:
         else:
             print (i, path)
 
-#binvox_rw#
-import numpy as np
+'''The code beloow is the library binvox_rw  SEEEE ---->>>> https://github.com/dimatura/binvox-rw-py'''
+ import numpy as np
 
 
 class Voxels(object):
