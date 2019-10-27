@@ -10,23 +10,18 @@ from torch.autograd import Variable
 data_mean = 4
 data_stddev = 1.25
 
-# ### Uncomment only one of these to define what data is actually sent to the Discriminator
-#(name, preprocess, d_input_func) = ("Raw data", lambda data: data, lambda x: x)
-#(name, preprocess, d_input_func) = ("Data and variances", lambda data: decorate_with_diffs(data, 2.0), lambda x: x * 2)
-#(name, preprocess, d_input_func) = ("Data and diffs", lambda data: decorate_with_diffs(data, 1.0), lambda x: x * 2)
 (name, preprocess, d_input_func) = ("Only 4 moments", lambda data: get_moments(data), lambda x: 4)
 
 print("Data [%s]" % (name))
 
-# ##### DATA: Target data and generator input data
+
+
 
 def get_distribution_sampler(mu, sigma):
     return lambda n: torch.Tensor(np.random.normal(mu, sigma, (1, n)))  # Gaussian
 
 def get_generator_input_sampler():
     return lambda m, n: torch.rand(m, n)  # Uniform-dist data into generator, _NOT_ Gaussian
-
-# ##### MODELS: Generator model and discriminator model
 
 class Generator(nn.Module):
     def __init__(self, input_size, hidden_size, output_size, f):
@@ -64,7 +59,7 @@ def stats(d):
     return [np.mean(d), np.std(d)]
 
 def get_moments(d):
-    # Return the first 4 moments of the data provided
+    Return the first 4 moments of the data provided
     mean = torch.mean(d)
     diffs = d - mean
     var = torch.mean(torch.pow(diffs, 2.0))
